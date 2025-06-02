@@ -1,0 +1,25 @@
+body {
+    min-height: 100dvh;
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    font-weight: 800;
+}
+
+header p {
+    font-style: italic;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
