@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Default -->
     <link rel="icon" href="/utils/Mancuerna dark.jpg" type="image/x-icon">
+    <!-- Dark mode -->
     <link rel="icon" href="/utils/Mancuerna dark.jpg" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Light mode -->
     <link rel="icon" href="/utils/Mancuerna.png" type="image/x-icon" media="(prefers-color-scheme: light)">
 
     <link rel="stylesheet" href="/css/styles.css">
@@ -24,22 +27,24 @@
         <img src="/utils/Icono.png" alt="Icono gym">
         <p>"Se más fuerte que tus excusas"</p>
     </header>
+
     <nav>
         <ul>
             <li>
-                <a href="">Home</a>
+                <a href="#Home">Home</a>
             </li>
             <li>
-                <a href="">Nosotros</a>
+                <a href="#Nosotros">Nosotros</a>
             </li>
             <li>
-                <a href="">Clientes</a>
+                <a href="#Clientes">Clientes</a>
             </li>
             <li>
-                <a href="">Contacto</a>
+                <a href="#Contacto">Contacto</a>
             </li>
         </ul>
     </nav>
+
     <section id="Home">
         <h1>Bienvenido a Gimnasio Los Cañones, donde tu cambio empieza.</h1>
         <div>
@@ -52,20 +57,47 @@
         </div>
         <p id="alerta">¡Únete a nuestra comunidad y lleva tu cuerpo y mente al siguiente nivel!</p>
     </section>
+
     <section id="Nosotros">
         <h1>Conoce a nuestro equipo</h1>
-        <div>
-            <img src="/utils/Profe 1.jpg" alt="Profe Juan">
-        </div>
-        <div>
-            <img src="/utils/Profe 2.jpg" alt="Profe Laura">
-        </div>
-        <div>
-            <img src="/utils/Profe 3.jpg" alt="Profe Mia">
+        <div id="tarjetas">
+            <div class="tarjeta">
+                <img src="/utils/Profe 1.jpg" alt="Profe Juan">
+                <h3>Juan - Fundador y Entrenador Principal</h3>
+                <p>Apasionado por el fitness y el bienestar integral, Juan es el alma de Gimnasio Los Cañones. Con años de experiencia en entrenamiento funcional y musculación, su enfoque combina técnica, disciplina y motivación. Juan cree que cada persona tiene el poder de transformar su cuerpo y mente con el acompañamiento adecuado. Su energía y compromiso se sienten en cada clase.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="/utils/Profe 2.jpg" alt="Profe Laura">
+                <h3>Laura - Especialista en Entrenamiento Funcional</h3>
+                <p>Laura es dinámica, carismática y una verdadera experta en entrenamiento funcional. Sus clases se enfocan en mejorar el rendimiento, la movilidad y la resistencia a través de rutinas variadas, intensas y divertidas. Si buscás entrenar de manera completa, activa y desafiante, Laura te llevará al siguiente nivel.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="/utils/Profe 3.jpg" alt="Profe Mia">
+                <h3>Mía - Especialista en Musculación y Fuerza</h3>
+                <p>Detallista, técnica y apasionada por el progreso, Mía es tu referente en musculación. Con un enfoque centrado en la correcta ejecución y la evolución constante, te guiará para desarrollar fuerza, ganar masa muscular y alcanzar tus metas de forma segura y efectiva. Entrenar con ella es sinónimo de superación personal.</p>
+            </div>
         </div>
     </section>
-    <section id="Clientes">Clientes</section>
+
+    <section id="Clientes">
+        <h1>Algunas opiniones de nuestros clientes</h1>
+    </section>
+
     <section id="Contacto">Contacto</section>
-    <footer>Footer</footer>
+
+    <footer>
+        <img src="/utils/Icono.png" alt="Icono gimnasio">
+        <div>
+            <p>Contacto</p>
+            <p>Teléfono</p>
+            <p>E-mail</p>
+            <p>Dirección</p>
+        </div>
+        <div>
+            <p>Seguinos</p>
+            <p>Instagram</p>
+            <p>Facebook</p>
+        </div>
+    </footer>
 </body>
 </html>
