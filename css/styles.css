@@ -2,24 +2,101 @@ body {
     min-height: 100dvh;
     margin: 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: "Public Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr 1fr 1fr 1fr auto;
+
+    background-color: #DEF2C8;
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
-    flex-direction: column;
+    justify-items: center;
+    color: #058E3F;
 }
 
 header h1 {
-    font-weight: 800;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+header img {
+    height: 8rem;
+    margin: 0.5rem 0 0.5rem;
 }
 
 header p {
     font-style: italic;
     font-weight: 600;
+    font-size: 1.25rem;
     margin: 0.5rem 0;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style: none;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #058E3F;
+    transition: 0.75s;
+}
+
+section {
+    padding: 1rem;
+}
+
+#Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #DEF2C8;
+}
+
+#Home h1 {
+    font-style: italic;
+}
+
+#Home img {
+    border-radius: 10px;
+    height: 20rem;
+}
+
+#Home div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#alerta {
+    font-weight: bold;
+}
+
+#Nosotros img {
+    height: 15rem;
+    border-radius: 50%;
 }
