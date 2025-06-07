@@ -1,3 +1,21 @@
+#boton {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: #058E3F;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#boton img {
+    height: 2rem;
+}
+
 body {
     min-height: 100dvh;
     margin: 0;
