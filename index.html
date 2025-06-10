@@ -59,7 +59,8 @@
             <img src="/utils/Gimnasio 2.jpg" alt="Imagen de gimnasio">
             <p>Contamos con instalaciones de calidad, entrenadores certificados y un ambiente motivador que te impulsa a dar lo mejor de ti en cada sesión. Ya seas principiante o atleta experimentado, aquí encontrarás un plan de entrenamiento personalizado que se adapta a tus objetivos.</p>
         </div>
-        <p id="alerta">¡Únete a nuestra comunidad y lleva tu cuerpo y mente al siguiente nivel!</p>
+        <p id="alerta">Únete a nuestra comunidad y lleva tu cuerpo y mente al siguiente nivel</p>
+        <a href="#Contacto">¡Quiero arrancar!</a>
     </section>
 
     <section id="Nosotros">
@@ -105,20 +106,64 @@
         </div>
     </section>
 
-    <section id="Contacto">Contacto</section>
+    <section id="Contacto">
+        <div>
+            <p>Y vos,</p>
+            <h3>¿Qué esperás para sumarte?</h3>
+            <p>Te pedimos algunos datos para  contactarnos con vos y brindarte más información.</p>
+        </div>
+        <form>
+            <div class="campo">
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="Nombre" id="Nombre">
+            </div>
+            <div class="campo">
+                <label for="E-mail">E-mail</label>
+                <input type="text" name="E-mail" id="E-mail">
+            </div>
+            <div class="campo">
+                <label for="OpcionesSelect">¿Cómo te enteraste de nuestra empresa?</label>
+                <select id="OpcionesSelect">
+                    <option value="">Seleccione</option>
+                    <option value="Redes">Redes</option>
+                    <option value="Comentarios">Comentarios</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <div class="campo escondido" id="campoExtra">
+                    <label for="EspecifiqueOtro">Especifique</label>
+                    <textarea name="EspecifiqueOtro" id="EspecifiqueOtro"></textarea>
+                </div>
+            </div>
+            <div class="campo">
+                <label for="Mensaje">Mensaje</label>
+                <textarea name="Mensaje" id="Mensaje"></textarea>
+            </div>
+            <input type="submit" value="Enviar" id="Enviar">
+        </form>
+    </section>
 
     <footer>
         <img src="/utils/Icono.png" alt="Icono gimnasio">
         <div>
-            <p>Contacto</p>
-            <p>Teléfono</p>
-            <p>E-mail</p>
-            <p>Dirección</p>
+            <p>CONTACTO</p>
+            <p>(351) 155123456</p>
+            <p>loscañonesgym@gmail.com</p>
+            <p>Dallas 5060 B° Cabildo</p>
         </div>
         <div>
-            <p>Seguinos</p>
-            <p>Instagram</p>
-            <p>Facebook</p>
+            <p class="nombreRedes">REDES</p>
+            <div class="redes">
+                <img src="/utils/insta.png" alt="Instagram">
+                <p class="nombreRedes">/loscañonesgym</p>
+            </div>
+            <div class="redes">
+                <img src="/utils/facebook.png" alt="Facebook">
+                <p class="nombreRedes">/loscañonesgym</p>
+            </div>
+            <div class="redes">
+                <img src="/utils/tiktok-alt.png" alt="TikTok">
+                <p class="nombreRedes">/loscañonesgym</p>
+            </div>
         </div>
     </footer>
 </body>

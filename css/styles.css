@@ -34,7 +34,8 @@ header {
     grid-template-columns: repeat(3, auto);
     align-items: center;
     justify-items: center;
-    color: #058E3F;
+    background-color: black;
+    color: #00bf62;
 }
 
 header h1 {
@@ -80,7 +81,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #40C962;
+    color: #00bf62;
     transition: 0.75s;
 }
 
@@ -114,6 +115,25 @@ section {
     font-weight: bold;
 }
 
+#Home a {
+    height: 4rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: #00be62;
+    border: none;
+    /* outline: none; */
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-content: center;
+}
+
+#Home a:hover {
+    font-weight: bold;
+    transition: 0.5s;
+}
+
 #Nosotros {
     display: flex;
     flex-direction: column;
@@ -127,7 +147,7 @@ section {
 }
 
 #Nosotros .tarjeta {
-    background-color: #40C962;
+    background-color: #00be62;
     width: 20rem;
     display: flex;
     flex-direction: column;
@@ -172,6 +192,20 @@ section {
     font-style: italic;
 }
 
+#Contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.escondido {
+    display: none;
+}
+
 footer {
     background-color: black;
     padding: 1rem 2rem;
@@ -184,4 +218,17 @@ footer {
 
 footer img {
     height: 12rem;
+}
+
+footer .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .redes img {
+    height: 1.5rem;
+}
+.nombreRedes {
+    margin: 0.5rem;
 }

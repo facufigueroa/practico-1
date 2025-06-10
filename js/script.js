@@ -1,9 +1,13 @@
+/**
+ * Lógica botón toTop
+ */
+
 // Obtengo el botón
 let miBoton = document.getElementById("boton")
 
 // Función para cambiar la visibilidad de mi botón
 function hayScroll() {
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         miBoton.style.display = "block"
     } else {
         miBoton.style.display = "none"
@@ -20,3 +24,31 @@ function haciaArriba() {
     // Otros navegadores
     document.documentElement.scrollTop = 0
 }
+
+/**
+ * Mostrar / ocultar campo en el formulario
+ */
+
+const opciones = document.getElementById("OpcionesSelect")
+const campo = document.getElementById("campoExtra")
+
+console.log(opciones)
+console.log(campo)
+
+opciones.addEventListener("change", function() {
+    if (opciones.value === "Otro") {
+        campo.classList.remove("escondido")
+    } else {
+        campo.classList.add("escondido")
+    }
+})
+
+/**
+ * Acción del botón submit del formulario
+ */
+
+const botonSubmit = document.getElementById("Enviar")
+
+botonSubmit.addEventListener("click", () => {
+    alert("Mensaje enviado")
+})
