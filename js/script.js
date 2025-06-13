@@ -41,8 +41,18 @@ opciones.addEventListener("change", function() {
  * Acción del botón submit del formulario
  */
 
+const form = document.getElementById("formulario")
+const nombre = document.getElementById("Nombre")
+const email = document.getElementById("E-mail")
+const mensaje = document.getElementById("Mensaje")
 const botonSubmit = document.getElementById("Enviar")
 
-botonSubmit.addEventListener("click", () => {
-    alert("Mensaje enviado")
+botonSubmit.addEventListener("click", (e) => {
+    e.preventDefault()
+    if (nombre.value !== "" || email.value !== "" || mensaje.value !== "") {
+        alert("Mensaje enviado")
+        form.reset()
+    } else {
+        alert("Faltan campos obligatorios")
+    }
 })
