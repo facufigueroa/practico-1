@@ -19,10 +19,7 @@ window.onscroll = () => {hayScroll()}
 
 // Función para ir arriba de la página
 function haciaArriba() {
-    // Para Safari
-    document.body.scrollTop = 0
-    // Otros navegadores
-    document.documentElement.scrollTop = 0
+    window.scrollTo({top: 0, behavior: 'smooth'})
 }
 
 /**
@@ -31,9 +28,6 @@ function haciaArriba() {
 
 const opciones = document.getElementById("OpcionesSelect")
 const campo = document.getElementById("campoExtra")
-
-console.log(opciones)
-console.log(campo)
 
 opciones.addEventListener("change", function() {
     if (opciones.value === "Otro") {

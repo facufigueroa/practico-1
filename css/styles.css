@@ -24,16 +24,18 @@ body {
     font-optical-sizing: auto;
 
     display: grid;
-    grid-template-rows: auto auto auto auto auto 1fr auto;
+    grid-template-rows: repeat(7, auto);
 
     background-color: #DEF2C8;
 }
 
 header {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    justify-content: space-around;
+
+    padding: 1rem;
     background-color: black;
     color: #00bf62;
 }
@@ -43,18 +45,18 @@ header h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 3rem;
+    margin: 0;
 }
 
 header img {
     height: 8rem;
-    margin: 0.5rem 0 0.5rem;
 }
 
 header p {
     font-style: italic;
     font-weight: 600;
     font-size: 1.25rem;
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 nav {
@@ -62,8 +64,10 @@ nav {
 }
 
 nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     list-style: none;
 }
 
@@ -99,16 +103,25 @@ section {
 
 #Home h1 {
     font-style: italic;
-}
-
-#Home img {
-    border-radius: 10px;
-    height: 20rem;
+    font-size: 2rem;
 }
 
 #Home div {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+#Home p {
+    padding: 0 1rem;
+    text-justify: auto;
+}
+
+#Home img {
+    border-radius: 1rem;
+    max-width: 30rem;
+    height: auto;
 }
 
 #alerta {
@@ -141,9 +154,12 @@ section {
 }
 
 #Nosotros #tarjetas {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    width: 100%;
+    /* gap: 2rem; */
 }
 
 #Nosotros .tarjeta {
@@ -207,13 +223,13 @@ section {
 }
 
 footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     background-color: black;
     padding: 1rem 2rem;
     color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    justify-items: center;
 }
 
 footer img {
@@ -229,6 +245,29 @@ footer .redes {
 footer .redes img {
     height: 1.5rem;
 }
+
 .nombreRedes {
     margin: 0.5rem;
+}
+
+@media (max-width: 1025px) {
+    header {
+        grid-template-areas: "img img"
+        "h1 p";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav ul {
+        grid-template-areas: "li li"
+        "li li";
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        grid-template-areas: "img"
+        "h1"
+        "p";
+        grid-template-columns: auto;
+    }
 }

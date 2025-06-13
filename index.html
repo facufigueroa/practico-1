@@ -26,6 +26,7 @@
     <button onclick="haciaArriba()" id="boton" title="Hacia arriba">
         <img src="/utils/Flecha arriba.png" alt="Flecha arriba">
     </button>
+    
     <header>
         <h1>GIMNASIO LOS CAÑONES</h1>
         <img src="/utils/Icono.png" alt="Icono gym">
@@ -115,11 +116,11 @@
         <form>
             <div class="campo">
                 <label for="Nombre">Nombre</label>
-                <input type="text" name="Nombre" id="Nombre">
+                <input type="text" name="Nombre" id="Nombre" required>
             </div>
             <div class="campo">
                 <label for="E-mail">E-mail</label>
-                <input type="text" name="E-mail" id="E-mail">
+                <input type="text" name="E-mail" id="E-mail" required>
             </div>
             <div class="campo">
                 <label for="OpcionesSelect">¿Cómo te enteraste de nuestra empresa?</label>
@@ -136,7 +137,7 @@
             </div>
             <div class="campo">
                 <label for="Mensaje">Mensaje</label>
-                <textarea name="Mensaje" id="Mensaje"></textarea>
+                <textarea name="Mensaje" id="Mensaje" required></textarea>
             </div>
             <input type="submit" value="Enviar" id="Enviar">
         </form>
