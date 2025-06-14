@@ -19,16 +19,20 @@ window.onscroll = () => {hayScroll()}
 
 // Función para ir arriba de la página
 function haciaArriba() {
-    window.scrollTo({top: 0, behavior: 'smooth'})
+    window.scrollTo({top: 0})
 }
+
 
 /**
  * Mostrar / ocultar campo en el formulario
  */
 
+// Obtengo el elemento select
 const opciones = document.getElementById("OpcionesSelect")
+// Obtengo el campo oculto
 const campo = document.getElementById("campoExtra")
 
+// Evento para cambiar la visibilidad del campo dependiendo del valor escojido por el usuario
 opciones.addEventListener("change", function() {
     if (opciones.value === "Otro") {
         campo.classList.remove("escondido")
@@ -37,22 +41,17 @@ opciones.addEventListener("change", function() {
     }
 })
 
+
 /**
- * Acción del botón submit del formulario
+ * Acción de enviar el formulario
  */
 
+// Obtengo el formulario
 const form = document.getElementById("formulario")
-const nombre = document.getElementById("Nombre")
-const email = document.getElementById("E-mail")
-const mensaje = document.getElementById("Mensaje")
-const botonSubmit = document.getElementById("Enviar")
 
-botonSubmit.addEventListener("click", (e) => {
+// Evento para el envío del formulario
+form.addEventListener("submit", (e) => {
     e.preventDefault()
-    if (nombre.value !== "" || email.value !== "" || mensaje.value !== "") {
-        alert("Mensaje enviado")
-        form.reset()
-    } else {
-        alert("Faltan campos obligatorios")
-    }
+    alert("Mensaje enviado")
+    form.reset()
 })
