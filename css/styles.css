@@ -36,12 +36,42 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-image: linear-gradient(rgb(222, 242, 201), rgba(131, 131, 131, 0.5)), url(/utils/Gimnasio\ 3.jpg);
+    background-image: linear-gradient(rgb(222, 242, 201, 0.65), rgba(131, 131, 131, 0.05)), url(/utils/Gimnasio\ 3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
+
+/* * *  * * */
+/*          */
+/*  CLASES  */
+/*          */
+/* * *  * * */
+
+.subtitulo {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.parrafo {
+    text-align: justify;
+}
+
+.nombreRedes {
+    margin: 0.5rem;
+}
+
+
+
+/* * * * *  * * * * */
+/*                  */
+/*  Estilos HEADER  */
+/*                  */
+/* * * * *  * * * * */
 
 header {
     display: flex;
@@ -49,7 +79,6 @@ header {
     align-items: center;
     justify-content: space-evenly;
 
-    /* max-width: 100vw; */
     gap: 2rem;
     padding: 1rem;
     background-color: black;
@@ -60,12 +89,13 @@ header h1 {
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: min(3rem, 5vw);
+    font-size: clamp(1.75rem, 3rem, 5vw);
     margin: 0;
+    text-align: center;
 }
 
 header img {
-    height: min(8rem, 10vw);
+    height: clamp(4rem, 8rem, 10vw);
     transition: transform 0.3s ease;
 }
 
@@ -76,9 +106,18 @@ header img:hover {
 header p {
     font-style: italic;
     font-weight: 600;
-    font-size: min(1.25rem, 2vw);
+    font-size: clamp(0.75rem, 1.25rem, 2vw);
     margin: 0;
+    text-align: center;
 }
+
+
+
+/* * * * * * * * */
+/*               */
+/*  Estilos NAV  */
+/*               */
+/* * * * * * * * */
 
 nav {
     background-color: black;
@@ -103,6 +142,7 @@ nav a {
     color: white;
     text-decoration: none;
     outline: none;
+    font-size: clamp(0.8rem, 1.5rem, 1.25vw);
 }
 
 nav a:hover {
@@ -115,6 +155,14 @@ section {
     padding: 1rem;
 }
 
+
+
+/* * * *  * * * * */
+/*                */
+/*  Estilos HOME  */
+/*                */
+/* * * *  * * * * */
+
 #Home {
     display: flex;
     flex-direction: column;
@@ -124,7 +172,8 @@ section {
 
 #Home h1 {
     font-style: italic;
-    font-size: 3vw;
+    font-size: clamp(1.5rem, 2.5rem, 3vw);
+    text-align: center;
 }
 
 #Home div {
@@ -135,7 +184,8 @@ section {
 }
 
 #Home p {
-    font-size: 1.5vw;
+    font-size: clamp(1rem, 1.75rem, 1.75vw);
+    font-weight: 500;
 }
 
 #Home img {
@@ -146,11 +196,12 @@ section {
 
 #alerta {
     font-weight: bold;
+    text-align: center;
 }
 
 #Home a {
-    height: 5vw;
-    width: 15vw;
+    height: clamp(1.5rem, 3rem, 5vw);
+    width: clamp(7.5rem, 10rem, 15vw);
     padding: 0.5rem;
 
     text-align: center;
@@ -159,7 +210,7 @@ section {
     border: none;
     border-radius: 1rem;
 
-    font-size: 1.35vw;
+    font-size: clamp(0.75rem, 1.5rem, 1.35vw);
     font-weight: bold;
     text-decoration: none;
 
@@ -172,6 +223,14 @@ section {
     transform: scale(1.05);
 }
 
+
+
+/* * * * *  * * * * * */
+/*                    */
+/*  Estilos NOSOTROS  */
+/*                    */
+/* * * * *  * * * * * */
+
 #Nosotros {
     display: flex;
     flex-direction: column;
@@ -179,7 +238,7 @@ section {
 }
 
 #Nosotros h1 {
-    font-size: 2.5vw;
+    font-size: clamp(1.5rem, 2.5rem, 3vw);
 }
 
 #Nosotros #tarjetas {
@@ -193,23 +252,26 @@ section {
 
 #Nosotros .tarjeta {
     background-color: var(--color-secundario);
-    width: 20rem;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 2rem;
-    padding: 0.5rem;
-}
-
-#Nosotros .tarjeta h3 {
-    font-style: italic;
-    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 #Nosotros img {
-    height: 15rem;
+    height: clamp(10rem, 15rem, 15vw);
     border-radius: 50%;
 }
+
+
+
+/* * * * *  * * * * * */
+/*                    */
+/*  Estilos CLIENTES  */
+/*                    */
+/* * * * *  * * * * * */
 
 #Clientes {
     display: flex;
@@ -218,8 +280,9 @@ section {
 }
 
 #Clientes #opiniones {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -227,19 +290,32 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35rem;
+    width: 35vw;
     background-color: white;
     padding: 0 1.25rem;
     border-radius: 1rem;
 }
 
-#Clientes .cliente p {
-    font-style: italic;
-}
+
+
+/* * * * *  * * * * * */
+/*                    */
+/*  Estilos CONTACTO  */
+/*                    */
+/* * * * *  * * * * * */
 
 #Contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.mensajeLlamada {
+    background-color: white;
+    max-width: 40vw;
+    padding: 1rem 0 0 2.5rem;
+    margin-right: 1rem;
 }
 
 .campo {
@@ -250,6 +326,14 @@ section {
 .escondido {
     display: none;
 }
+
+
+
+/* * * * *  * * * * */
+/*                  */
+/*  Estilos FOOTER  */
+/*                  */
+/* * * * *  * * * * */
 
 footer {
     display: flex;
@@ -275,13 +359,13 @@ footer .redes img {
     height: 1.5rem;
 }
 
-.nombreRedes {
-    margin: 0.5rem;
-}
 
-@media (max-width: 1279px) {
-    
-}
+
+/* * * * * * * * * */
+/*                 */
+/*  MEDIA QUERIES  */
+/*                 */
+/* * * * * * * * * */
 
 @media (max-width: 767px) {
     header {
@@ -291,20 +375,53 @@ footer .redes img {
 
     header img {
         order: 1;
-        height: 6rem;
     }
 
     header h1 {
         order: 2;
-        font-size: 2.5rem;
     }
 
     header p {
         order: 3;
-        font-size: 1rem;
     }
 
     nav ul {
         gap: 1rem;
+    }
+
+    #Home div {
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    #Home img {
+        min-width: 90%;
+    }
+
+    .imagenHome-2 {
+        order: 2;
+    }
+
+    .parrafoHome-2 {
+        order: 1;
+    }
+
+    #Home a {
+        border-radius: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #Home div {
+        padding: 0;
+    }
+
+    #Home img {
+        min-width: 100%;
     }
 }
