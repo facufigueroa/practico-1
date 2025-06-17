@@ -319,17 +319,25 @@ section {
 /* * * * *  * * * * * */
 
 #Contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
     padding: 1rem 2rem;
 }
 
 .mensajeLlamada {
-    background-color: white;
     max-width: 40vw;
     padding: 1rem 0 0 2.5rem;
     margin-right: 1rem;
+}
+
+#Contacto h3 {
+    font-size: clamp(1rem, 2rem, 1.5vw);
+    font-style: italic;
+}
+
+#Contacto p {
+    font-size: clamp(0.8rem, 1.25rem, 1.5vw);
 }
 
 .campo {
@@ -386,6 +394,10 @@ footer .redes img {
 /* * * * * * * * * */
 
 @media (max-width: 767px) {
+    section {
+        padding: 0.5rem;
+    }
+
     header {
         flex-direction: column;
         gap: 1.5rem;
@@ -436,14 +448,28 @@ footer .redes img {
 
     #Nosotros .tarjeta {
         width: 90%;
+        padding: 0.5rem 0.5rem 0 0.5rem;
     }
 
     #Clientes #opiniones {
         flex-direction: column;
+        align-items: center;
     }
 
     #Clientes .cliente {
         width: 90%;
+        padding: 0 0.5rem;
+    }
+
+    #Contacto {
+        flex-direction: column;
+    }
+
+    .mensajeLlamada {
+        min-width: 90%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
     }
 
     footer {
@@ -452,6 +478,10 @@ footer .redes img {
 }
 
 @media (max-width: 400px) {
+    section {
+        padding: 0.25rem;
+    }
+
     nav ul {
         flex-direction: column;
         padding: 0;
