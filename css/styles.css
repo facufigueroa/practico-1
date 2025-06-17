@@ -54,7 +54,7 @@ body {
 .subtitulo {
     font-style: italic;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: clamp(1rem, 2rem, 1.5vw);
 }
 
 .parrafo {
@@ -239,6 +239,7 @@ section {
 
 #Nosotros h1 {
     font-size: clamp(1.5rem, 2.5rem, 3vw);
+    text-align: center;
 }
 
 #Nosotros #tarjetas {
@@ -265,6 +266,10 @@ section {
     border-radius: 50%;
 }
 
+#Nosotros p {
+    font-size: clamp(0.8rem, 1.25rem, 1.5vw);
+}
+
 
 
 /* * * * *  * * * * * */
@@ -279,6 +284,11 @@ section {
     align-items: center;
 }
 
+#Clientes h1 {
+    font-size: clamp(1.5rem, 2.5rem, 3vw);
+    text-align: center;
+}
+
 #Clientes #opiniones {
     display: flex;
     flex-flow: row wrap;
@@ -290,10 +300,14 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35vw;
+    width: clamp(15rem, 30rem, 35vw);
     background-color: white;
     padding: 0 1.25rem;
     border-radius: 1rem;
+}
+
+#Clientes p {
+    font-size: clamp(0.8rem, 1.25rem, 1.5vw);
 }
 
 
@@ -346,7 +360,7 @@ footer {
 }
 
 footer img {
-    height: 12rem;
+    height: clamp(4rem, 15rem, 15vw);
 }
 
 footer .redes {
@@ -355,8 +369,12 @@ footer .redes {
     align-items: center;
 }
 
+footer p {
+    font-size: clamp(0.65rem, 1.5rem, 1.25vw);
+}
+
 footer .redes img {
-    height: 1.5rem;
+    height: clamp(1rem, 2rem, 2.25vw);
 }
 
 
@@ -409,6 +427,28 @@ footer .redes img {
     #Home a {
         border-radius: 0.75rem;
     }
+
+    #Nosotros #tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #Nosotros .tarjeta {
+        width: 90%;
+    }
+
+    #Clientes #opiniones {
+        flex-direction: column;
+    }
+
+    #Clientes .cliente {
+        width: 90%;
+    }
+
+    footer {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -423,5 +463,10 @@ footer .redes img {
 
     #Home img {
         min-width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
     }
 }
